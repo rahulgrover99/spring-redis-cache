@@ -31,10 +31,15 @@ public class CarController {
     }
 
     @PostMapping("/")
-    @CachePut(value = "car", key = "#car.id")
+    @Cacheable(value = "car")
     public Car createCar(@RequestBody Car car) {
-
         return carService.createCar(car.getCompany(), car.getModel());
     }
+
+    @DeleteMapping("/")
+    public void deleteAllCars() {
+        carService.deleteCars();
+    }
+
 
 }

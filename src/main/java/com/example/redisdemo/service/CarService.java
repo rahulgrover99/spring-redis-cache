@@ -32,4 +32,8 @@ public class CarService {
 
         return car;
     }
+
+    public void deleteCars() {
+        carRepository.deleteAll();
+    }
 }

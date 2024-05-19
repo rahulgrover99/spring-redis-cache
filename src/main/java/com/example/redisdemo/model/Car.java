@@ -12,8 +12,8 @@ import java.io.Serializable;
 @Data
 public class Car implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
 
     private String company;
     private String model;
